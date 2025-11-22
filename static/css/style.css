@@ -1,0 +1,248 @@
+:root {
+  --blue: #4B9CD3;
+  --light-blue: #E6F3FB;
+  --dark-blue: #0F2A44;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: var(--white);
+  color: var(--dark-blue);
+  overflow-x: hidden;
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(140deg, #EAF6FF, #ffffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 8%;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: var(--white);
+  border-radius: 100% 100% 0 0;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: 800;
+  color: var(--dark-blue);
+}
+
+.subtitle {
+  max-width: 700px;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #355f7a;
+}
+
+.buttons {
+  margin-top: 2rem;
+}
+
+.buttons a {
+  display: inline-block;
+  margin: 0.5rem 0.8rem;
+  padding: 14px 30px;
+  border-radius: 50px;
+  border: 2px solid var(--blue);
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--blue);
+  transition: 0.3s ease;
+}
+
+.buttons a:hover {
+  background: var(--blue);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.hero-orb {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: var(--blue);
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+}
+
+.orb1 { top: 10%; left: 10%; }
+.orb2 { bottom: 10%; right: 15%; }
+
+
+/* ---------- VISION ---------- */
+
+.vision {
+  background: var(--blue);
+  color: white;
+  padding: 10rem 8%;
+  text-align: center;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+.vision h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.vision p {
+  max-width: 850px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1.15rem;
+}
+
+.pillars {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  gap: 1.5rem;
+}
+
+.pillar {
+  background: white;
+  color: var(--dark-blue);
+  padding: 18px 30px;
+  border-radius: 40px;
+  font-weight: 600;
+}
+
+
+/* ---------- CLUBS ---------- */
+
+.clubs {
+  background: var(--white);
+  padding: 10rem 8%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.card {
+  background: var(--light-blue);
+  padding: 3rem;
+  border-radius: 28px;
+  border: 3px solid transparent;
+  transition: 0.4s ease;
+  position: relative;
+}
+
+.card:hover {
+  border-color: var(--blue);
+  transform: translateY(-12px);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 60px;
+  height: 60px;
+  background: var(--blue);
+  border-radius: 50%;
+  opacity: 0.15;
+}
+
+.card h2 {
+  font-size: 1.7rem;
+  color: var(--dark-blue);
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: #2b4f67;
+  line-height: 1.6;
+}
+
+.card a, .card span {
+  display: inline-block;
+  margin-top: 1.2rem;
+  font-weight: 600;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+
+/* ---------- IMPACT ---------- */
+
+.impact {
+  padding: 9rem 8%;
+  background: #F4FAFF;
+  text-align: center;
+}
+
+.impact h2 {
+  font-size: 3rem;
+  color: var(--dark-blue);
+  margin-bottom: 1.2rem;
+}
+
+.impact p {
+  max-width: 850px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+
+/* ---------- JOIN ---------- */
+
+.join {
+  padding: 10rem 8%;
+  background: var(--dark-blue);
+  text-align: center;
+  color: white;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+.join h2 {
+  font-size: 3.5rem;
+}
+
+.join p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.join a {
+  display: inline-block;
+  margin-top: 2.5rem;
+  background: var(--blue);
+  color: white;
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: 0.3s ease;
+}
+
+.join a:hover {
+  transform: scale(1.05);
+}
